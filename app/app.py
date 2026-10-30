@@ -132,7 +132,7 @@ with tab_prediccion:
             col_res1, col_res2 = st.columns([1, 2])
             with col_res1:
                 st.metric(
-                    label="Precio Estimado de Mercado",
+                    label="Precio Estimado de Referencia",
                     value=f"${precio_predicho:,.0f} USD"
                 )
             with col_res2:
@@ -140,7 +140,15 @@ with tab_prediccion:
                 mae_aprox = 31670.0
                 min_est = max(0, precio_predicho - mae_aprox)
                 max_est = precio_predicho + mae_aprox
-                st.info(f"**Rango probable de mercado (± MAE):**  \nEntre **${min_est:,.0f} USD** y **${max_est:,.0f} USD**, considerando el margen de error promedio del modelo.")
+                st.info(
+                    f"**Margen de error promedio (± MAE):**\n\n"
+                    f"Entre **USD {min_est:,.0f}** y **USD {max_est:,.0f}**, "
+                    f"considerando el error promedio del modelo."
+                )
+                st.caption(
+                    "Estimación basada en datos históricos de California (1990). "
+                    "Es una referencia académica y no sustituye un avalúo profesional."
+                )
 
 # ----------------- PESTAÑA 2: MÉTRICAS -----------------
 with tab_metricas:
@@ -175,6 +183,7 @@ with tab_proyecto:
     * **Docente Tutor:** Dr. Hamilton Rivera Flor.
     * **Pilar Seleccionado:** **Ventas** (Sector Inmobiliario / Comercial).
     * **Dataset:** *California Housing* (`housing.csv` con 20,640 registros).
+    * **Alcance:** Datos históricos de California (censo de 1990); la estimación es una referencia académica y no un avalúo profesional.
     * **Flujo Metodológico Aplicado:**
         1. **Paso 1 - EDA:** Análisis de distribuciones, valores extremos y relaciones de variables socioeconómicas y geográficas.
         2. **Paso 2 - Limpieza:** Imputación de 207 valores nulos en dormitorios con la mediana, codificación One-Hot para proximidad marítima y escalamiento estándar.

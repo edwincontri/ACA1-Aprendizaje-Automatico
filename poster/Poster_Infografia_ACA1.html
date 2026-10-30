@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Póster ACA 1 - Aprendizaje Automático</title>
+<style>
+  :root {
+    --navy: #0b2545;
+    --navy2: #123a63;
+    --teal: #0e7c9a;
+    --teal2: #14a3c7;
+    --light: #eef6fa;
+    --line: #d6e6ee;
+    --text: #1b2b3a;
+    --muted: #5b6b7a;
+    --green: #1f8a70;
+    --bg: #eef4f8;
+    --white: #ffffff;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: #fff; }
+  body { font-family: "Segoe UI", Arial, sans-serif; color: var(--text); }
+  .poster {
+    width: 1171px;
+    height: 1651px;
+    background: var(--bg);
+    overflow: hidden;
+    position: relative;
+  }
+
+  /* ---------- ENCABEZADO ---------- */
+  .header {
+    height: 182px;
+    background: linear-gradient(135deg, #081d36 0%, #0b2545 48%, #123a63 100%);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 26px;
+    position: relative;
+    overflow: hidden;
+  }
+  .header::after {
+    content: "";
+    position: absolute;
+    right: -70px;
+    top: -95px;
+    width: 290px;
+    height: 290px;
+    border-radius: 50%;
+    background: rgba(20, 163, 199, .13);
+  }
+  .logo-box {
+    width: 150px;
+    height: 112px;
+    flex: 0 0 150px;
+    background: #fff;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 9px;
+    box-shadow: 0 10px 24px rgba(0,0,0,.28);
+    position: relative;
+    z-index: 1;
+  }
+  .logo-box img { max-width: 100%; max-height: 100%; }
+  .header-main { flex: 1; position: relative; z-index: 1; }
+  .eyebrow {
+    font-size: 10.5px;
+    letter-spacing: 1.1px;
+    color: #8fd3e8;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  h1 {
+    font-size: 32px;
+    line-height: 1.07;
+    margin: 6px 0 5px;
+    font-weight: 800;
+    letter-spacing: .2px;
+    max-width: 760px;
+  }
+  .subtitle { font-size: 15px; color: #bfe6f3; font-weight: 600; margin-bottom: 6px; }
+  .authors { font-size: 14px; color: #fff; font-weight: 600; line-height: 1.3; }
+  .meta { font-size: 11.5px; color: #a9c7d9; margin-top: 4px; }
+  .header-badge {
+    width: 130px;
+    flex: 0 0 130px;
+    border: 1px solid rgba(255,255,255,.25);
+    border-radius: 12px;
+    padding: 10px 11px;
+    background: rgba(255,255,255,.07);
+    text-align: center;
+    position: relative;
+    z-index: 1;
+  }
+  .badge-title { font-size: 19px; font-weight: 800; color: #fff; letter-spacing: .4px; }
+  .badge-text { font-size: 11px; color: #bfe6f3; line-height: 1.45; margin-top: 4px; }
+
+  /* ---------- CUERPO ---------- */
+  .content {
+    height: 1423px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    padding: 14px 16px 0;
+  }
+  .column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 12px;
+    min-height: 0;
+  }
+  .card {
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(11,37,69,.06);
+    overflow: hidden;
+  }
+  .card-title {
+    background: linear-gradient(90deg, #0b2545, #123a63);
+    color: #9fe0f2;
+    font-size: 14.5px;
+    font-weight: 800;
+    letter-spacing: .65px;
+    padding: 9px 13px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-transform: uppercase;
+  }
+  .card-title .num {
+    width: 23px;
+    height: 23px;
+    border-radius: 50%;
+    background: var(--teal);
+    color: #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    flex: 0 0 23px;
+  }
+  .card-title.small { font-size: 12.5px; padding: 8px 13px; }
+  .card-body { padding: 11px 13px 12px; font-size: 14.1px; line-height: 1.4; }
+  .card-body p { margin: 0 0 6px; }
+  .card-body ul { margin: 0; padding-left: 16px; }
+  .card-body li { margin-bottom: 5px; }
+  .card-body li:last-child { margin-bottom: 0; }
+  strong { color: var(--navy); }
+  em { color: #24506f; }
+
+  .impact {
+    margin-top: 8px;
+    background: #e9f7f4;
+    border-left: 4px solid var(--green);
+    border-radius: 6px;
+    padding: 7px 9px;
+    font-size: 12.6px;
+    line-height: 1.35;
+    color: #235c4f;
+  }
+  .impact span {
+    display: inline-block;
+    background: var(--green);
+    color: #fff;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: .5px;
+    border-radius: 3px;
+    padding: 1px 5px;
+    margin-right: 5px;
+    vertical-align: 1px;
+  }
+
+  /* ---------- DATOS ---------- */
+  .split { display: grid; grid-template-columns: 1fr 190px; gap: 10px; align-items: start; }
+  .split figure { margin: 0; }
+  .split figure img {
+    width: 100%;
+    border-radius: 6px;
+    border: 1px solid #dbe8ef;
+    display: block;
+  }
+  .split figcaption {
+    font-size: 10.2px;
+    color: var(--muted);
+    text-align: center;
+    margin-top: 3px;
+    line-height: 1.25;
+  }
+
+  /* ---------- FLUJO ---------- */
+  .flow { position: relative; padding-left: 6px; }
+  .flow::before {
+    content: "";
+    position: absolute;
+    left: 18px;
+    top: 14px;
+    bottom: 14px;
+    width: 2px;
+    background: linear-gradient(#14a3c7, #0b2545);
+    opacity: .35;
+  }
+  .flow-item { display: flex; gap: 11px; position: relative; padding: 3px 0 8px; }
+  .flow-item:last-child { padding-bottom: 0; }
+  .flow-dot {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: var(--teal);
+    color: #fff;
+    font-weight: 800;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 26px;
+    z-index: 1;
+    box-shadow: 0 0 0 3px #eef6fa;
+  }
+  .flow-text strong { display: block; font-size: 13.3px; line-height: 1.2; }
+  .flow-text span { display: block; font-size: 12.2px; color: var(--muted); line-height: 1.28; margin-top: 1px; }
+
+  /* ---------- ESTADÍSTICAS ---------- */
+  .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 4px; padding: 9px 10px; }
+  .stat { text-align: center; padding: 2px 3px; }
+  .stat strong { display: block; font-size: 19px; color: var(--teal); line-height: 1.05; }
+  .stat span { display: block; font-size: 9.7px; color: var(--muted); line-height: 1.2; margin-top: 2px; }
+
+  /* ---------- MODELOS ---------- */
+  .models { margin: 0 0 8px; padding-left: 17px; font-size: 13.2px; }
+  .models li { margin-bottom: 3px; }
+  table.metrics { width: 100%; border-collapse: collapse; font-size: 12.8px; margin-top: 2px; }
+  table.metrics th {
+    background: #e7f2f7;
+    color: var(--navy);
+    font-size: 11.3px;
+    text-transform: uppercase;
+    letter-spacing: .35px;
+    padding: 6px 6px;
+    text-align: right;
+    border-bottom: 1px solid #cfe2ea;
+  }
+  table.metrics th:first-child { text-align: left; }
+  table.metrics td { padding: 6px 6px; border-bottom: 1px solid #e2eef3; text-align: right; }
+  table.metrics td:first-child { text-align: left; font-weight: 600; color: var(--navy); }
+  table.metrics tr:last-child td { border-bottom: none; }
+  table.metrics .winner { background: #e8f7f3; color: #146b57; font-weight: 800; }
+  table.metrics th.winner { background: #d7f0e9; }
+  .result-note {
+    margin-top: 8px;
+    background: #f2faf8;
+    border: 1px solid #cfe9e1;
+    border-radius: 6px;
+    padding: 7px 9px;
+    font-size: 12.3px;
+    line-height: 1.35;
+    color: #245c4f;
+  }
+
+  /* ---------- APP ---------- */
+  .browser {
+    border: 1px solid #cddde6;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #fff;
+  }
+  .browser-bar {
+    height: 25px;
+    background: #e9f1f5;
+    border-bottom: 1px solid #d5e4eb;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 0 9px;
+    color: #567081;
+    font-size: 9.5px;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  .browser-bar i {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #b7ccd8;
+    display: inline-block;
+    flex: 0 0 7px;
+  }
+  .browser-bar em {
+    font-style: normal;
+    margin-left: 5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .app-top { width: 100%; display: block; }
+  .app-result {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    background: #e9f7f4;
+    border-top: 1px solid #cfe9e1;
+    padding: 8px 10px;
+  }
+  .app-result .label { font-size: 9.5px; letter-spacing: .4px; text-transform: uppercase; color: #2c6b5d; font-weight: 800; }
+  .app-result .value { font-size: 25px; line-height: 1; color: #0f6b57; font-weight: 800; letter-spacing: -.3px; }
+  .app-result .range { font-size: 10.5px; color: #3c6d62; text-align: right; line-height: 1.3; }
+  .app-chips { display: flex; flex-wrap: wrap; gap: 5px; margin: 7px 0 6px; }
+  .app-chips span {
+    background: #eaf4f8;
+    border: 1px solid #d1e4ec;
+    color: #24506f;
+    border-radius: 10px;
+    font-size: 9.8px;
+    padding: 2px 7px;
+  }
+  .url {
+    display: block;
+    font-size: 10.2px;
+    color: var(--teal);
+    text-decoration: none;
+    word-break: break-all;
+    line-height: 1.3;
+  }
+  .app-note { font-size: 9.6px; color: var(--muted); margin-top: 5px; line-height: 1.3; }
+
+  /* ---------- CIERRE Y ENLACES ---------- */
+  .conclusions { margin: 0; padding-left: 17px; font-size: 12.8px; line-height: 1.34; }
+  .conclusions li { margin-bottom: 4px; }
+  .conclusions li:last-child { margin-bottom: 0; }
+  .links { margin-top: 9px; display: flex; flex-direction: column; gap: 6px; }
+  .link-row {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    border: 1px solid #dce9ef;
+    border-radius: 7px;
+    padding: 4px 6px;
+    background: #fbfdfe;
+  }
+  .qr { width: 50px; height: 50px; flex: 0 0 50px; display: block; }
+  .qr.placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px dashed #9fb9c8;
+    border-radius: 5px;
+    color: #5d7b8c;
+    font-size: 8px;
+    font-weight: 800;
+    letter-spacing: .3px;
+    text-align: center;
+    background: #f1f7fa;
+  }
+  .link-text { min-width: 0; }
+  .link-text strong { display: block; font-size: 11.1px; line-height: 1.2; }
+  .link-text a {
+    display: block;
+    font-size: 9.6px;
+    color: var(--teal);
+    text-decoration: none;
+    word-break: break-all;
+    line-height: 1.25;
+    margin-top: 1px;
+  }
+  .link-text .pending { display: block; font-size: 9.6px; color: #8a5a00; line-height: 1.25; margin-top: 1px; }
+
+  /* ---------- LIMITACIONES / REFERENCIAS ---------- */
+  .limits { font-size: 12.2px; line-height: 1.33; }
+  .limits ul { margin: 0; padding-left: 15px; }
+  .limits li { margin-bottom: 4px; }
+  .limits li:last-child { margin-bottom: 0; }
+  .refs-body { font-size: 9.6px; line-height: 1.32; color: #3d5262; }
+  .refs-body p { margin: 0 0 3px; padding-left: 12px; text-indent: -12px; }
+  .refs-body p:last-child { margin-bottom: 0; }
+
+  /* ---------- PIE ---------- */
+  .footer {
+    height: 46px;
+    background: var(--navy);
+    color: #bfe6f3;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 22px;
+    font-size: 10.4px;
+    letter-spacing: .25px;
+  }
+  .footer strong { color: #fff; }
+</style>
+</head>
+<body>
+<div class="poster">
+
+  <header class="header">
+    <div class="logo-box">
+      <img src="assets/logo_cun.png" alt="Logo CUN">
+    </div>
+    <div class="header-main">
+      <div class="eyebrow">Corporación Unificada Nacional de Educación Superior (CUN) · Especialización en Inteligencia Artificial</div>
+      <h1>MODELADO CLÁSICO DE MACHINE LEARNING Y DESPLIEGUE EN STREAMLIT</h1>
+      <div class="subtitle">Predicción del valor de viviendas con el dataset California Housing</div>
+      <div class="authors">Anyela María Torres Sánchez · Brandon Andres Ardila Meta · Edwin Arturo Contreras Padua</div>
+      <div class="meta">Asignatura: Aprendizaje Automático · Docente: Dr. Hamilton Rivera Flor</div>
+    </div>
+    <div class="header-badge">
+      <div class="badge-title">ACA N° 1</div>
+      <div class="badge-text">Pilar: Ventas<br>Sector inmobiliario<br>Octubre 2026</div>
+    </div>
+  </header>
+
+  <main class="content">
+
+    <!-- COLUMNA IZQUIERDA -->
+    <div class="column">
+      <section class="card">
+        <div class="card-title"><span class="num">1</span> Contexto y situación problema</div>
+        <div class="card-body">
+          <ul>
+            <li><strong>Pilar:</strong> Ventas — sector inmobiliario / comercial.</li>
+            <li><strong>Dataset:</strong> California Housing (20.640 registros, 10 variables).</li>
+            <li><strong>Pregunta orientadora:</strong> ¿Cómo transformar datos socioeconómicos y geográficos en una herramienta que estime el precio de una vivienda de forma confiable e interactiva?</li>
+            <li><strong>Objetivo general:</strong> Desarrollar una solución integral de Machine Learning clásico, desde la preparación de datos hasta el despliegue de un tasador interactivo en Streamlit.</li>
+          </ul>
+          <div class="impact"><span>IMPACTO</span> Una referencia rápida y accesible para apoyar decisiones de compra y venta de vivienda.</div>
+        </div>
+      </section>
+
+      <section class="card">
+        <div class="card-title"><span class="num">2</span> Datos y preparación</div>
+        <div class="card-body">
+          <div class="split">
+            <ul>
+              <li><strong>EDA:</strong> 20.640 distritos; variable objetivo <em>median_house_value</em> (USD).</li>
+              <li><strong>Hallazgo:</strong> relación positiva entre ingreso medio y precio.</li>
+              <li><strong>Nulos:</strong> 207 en <em>total_bedrooms</em>; imputación con la mediana.</li>
+              <li><strong>Transformación:</strong> One-Hot Encoding para <em>ocean_proximity</em> y estandarización numérica.</li>
+              <li><strong>Partición:</strong> 80% entrenamiento (16.512) y 20% prueba (4.128), semilla 42.</li>
+            </ul>
+            <figure>
+              <img src="assets/eda_ingreso_precio.png" alt="Gráfico EDA: ingreso medio vs. valor de la vivienda">
+              <figcaption>Ingreso medio vs. valor de la vivienda (EDA)</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="card">
+        <div class="card-title"><span class="num">3</span> Ruta metodológica · 5 pasos</div>
+        <div class="card-body">
+          <div class="flow">
+            <div class="flow-item"><div class="flow-dot">1</div><div class="flow-text"><strong>Exploración y EDA</strong><span>Comprensión del problema, distribuciones y valores nulos.</span></div></div>
+            <div class="flow-item"><div class="flow-dot">2</div><div class="flow-text"><strong>Limpieza y preparación</strong><span>Imputación, One-Hot Encoding, escalado y partición.</span></div></div>
+            <div class="flow-item"><div class="flow-dot">3</div><div class="flow-text"><strong>Modelado clásico</strong><span>Entrenamiento de Regresión Lineal y Random Forest.</span></div></div>
+            <div class="flow-item"><div class="flow-dot">4</div><div class="flow-text"><strong>Evaluación</strong><span>R², MAE y RMSE sobre el conjunto de prueba.</span></div></div>
+            <div class="flow-item"><div class="flow-dot">5</div><div class="flow-text"><strong>Despliegue</strong><span>Aplicación interactiva en Streamlit.</span></div></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="card">
+        <div class="stats">
+          <div class="stat"><strong>20.640</strong><span>registros</span></div>
+          <div class="stat"><strong>207</strong><span>nulos tratados</span></div>
+          <div class="stat"><strong>16.512</strong><span>entrenamiento</span></div>
+          <div class="stat"><strong>4.128</strong><span>prueba</span></div>
+        </div>
+      </section>
+
+      <section class="card">
+        <div class="card-title small">Alcance y limitaciones</div>
+        <div class="card-body limits">
+          <ul>
+            <li>Los datos son históricos (censo de California, 1990); no reflejan el mercado actual.</li>
+            <li>La estimación es una referencia académica y no sustituye un avalúo profesional.</li>
+            <li>Trabajo futuro: incorporar datos actuales y más variables del inmueble.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="card">
+        <div class="card-title small">Referencias (APA 7)</div>
+        <div class="card-body refs-body">
+          <p>Géron, A. (2019). <em>Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow</em> (2.ª ed.). O'Reilly Media.</p>
+          <p>Pace, R. K., &amp; Barry, R. (1997). Sparse spatial autoregressions. <em>Statistics &amp; Probability Letters, 33</em>(3), 291–297.</p>
+          <p>Pedregosa, F., et al. (2011). Scikit-learn: Machine learning in Python. <em>Journal of Machine Learning Research, 12</em>, 2825–2830.</p>
+        </div>
+      </section>
+    </div>
+
+    <!-- COLUMNA DERECHA -->
+    <div class="column">
+      <section class="card">
+        <div class="card-title"><span class="num">4</span> Modelos y resultados</div>
+        <div class="card-body">
+          <p>Se compararon dos algoritmos clásicos de aprendizaje supervisado:</p>
+          <ol class="models">
+            <li><strong>Regresión Lineal</strong> — modelo base paramétrico de referencia.</li>
+            <li><strong>Random Forest Regressor</strong> — ensamble de árboles de decisión.</li>
+          </ol>
+          <table class="metrics">
+            <thead>
+              <tr><th>Métrica</th><th>Reg. Lineal</th><th class="winner">Random Forest</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>R²</td><td>62,54 %</td><td class="winner">81,67 %</td></tr>
+              <tr><td>MAE</td><td>USD 50.670</td><td class="winner">USD 31.672</td></tr>
+              <tr><td>RMSE</td><td>USD 70.059</td><td class="winner">USD 49.007</td></tr>
+            </tbody>
+          </table>
+          <div class="result-note"><strong>Modelo seleccionado: Random Forest.</strong> Redujo el error promedio en ~USD 19.000 y capturó relaciones no lineales entre ubicación, ingreso y precio.</div>
+        </div>
+      </section>
+
+      <section class="card">
+        <div class="card-title"><span class="num">5</span> Vista previa de la app en Streamlit</div>
+        <div class="card-body">
+          <div class="browser">
+            <div class="browser-bar"><i></i><i></i><i></i><em>aca1-aprendizaje-automatico-grupo-17.streamlit.app</em></div>
+            <img class="app-top" src="assets/app_top_short.png" alt="Vista previa de la aplicación Streamlit">
+            <div class="app-result">
+              <div>
+                <div class="label">Predicción de ejemplo</div>
+                <div class="value">USD 189.760</div>
+              </div>
+              <div class="range">Margen de error promedio<br><strong>USD 158.090 – 221.430</strong></div>
+            </div>
+          </div>
+          <div class="app-chips">
+            <span>Sliders de ingreso, antigüedad y habitaciones</span>
+            <span>Mapa interactivo</span>
+            <span>Predicción + margen de error</span>
+          </div>
+          <a class="url" href="https://aca1-aprendizaje-automatico-grupo-17.streamlit.app/">https://aca1-aprendizaje-automatico-grupo-17.streamlit.app/</a>
+          <div class="app-note">Datos históricos de California (1990). Referencia académica, no avalúo profesional.</div>
+        </div>
+      </section>
+
+      <section class="card">
+        <div class="card-title"><span class="num">6</span> Cierre y enlaces</div>
+        <div class="card-body">
+          <ul class="conclusions">
+            <li>La preparación de datos fue clave: imputación robusta y transformación de variables.</li>
+            <li>Random Forest superó a la Regresión Lineal: R² 81,67 % y error promedio de USD 31.672.</li>
+            <li>La app en Streamlit hace accesible la estimación a usuarios no técnicos; es una referencia, no un avalúo.</li>
+          </ul>
+          <div class="links">
+            <div class="link-row">
+              <img class="qr" src="assets/qr_app.png" alt="QR de la aplicación">
+              <div class="link-text">
+                <strong>Aplicación desplegada</strong>
+                <a href="https://aca1-aprendizaje-automatico-grupo-17.streamlit.app/">https://aca1-aprendizaje-automatico-grupo-17.streamlit.app/</a>
+              </div>
+            </div>
+            <div class="link-row">
+              <img class="qr" src="assets/qr_repo.png" alt="QR del repositorio">
+              <div class="link-text">
+                <strong>Repositorio del proyecto</strong>
+                <a href="https://github.com/edwincontri/ACA1-Aprendizaje-Automatico">https://github.com/edwincontri/ACA1-Aprendizaje-Automatico</a>
+              </div>
+            </div>
+            <div class="link-row">
+              <div class="qr placeholder">VIDEO</div>
+              <div class="link-text">
+                <strong>Video de sustentación (3 a 5 min)</strong>
+                <span class="pending">Enlace público pendiente de publicación.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+  </main>
+
+  <footer class="footer">
+    <span><strong>Especialización en Inteligencia Artificial</strong> · Corporación Unificada Nacional de Educación Superior (CUN)</span>
+    <span>Aprendizaje Automático · ACA N° 1 · Octubre 2026</span>
+  </footer>
+
+</div>
+</body>
+</html>
