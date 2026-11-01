@@ -22,7 +22,6 @@
 | Póster PNG (alta resolución) | `poster/Poster_Infografia_ACA1.png` |
 | Aplicación pública | https://aca1-aprendizaje-automatico-grupo-17.streamlit.app/ |
 | Repositorio | https://github.com/edwincontri/ACA1-Aprendizaje-Automatico |
-| Guion del video | `docs/Guion_Sustentacion_Video.md` |
 | Video | https://youtu.be/GRmsT-hqCvA (5:03, solo voz de Brandon) |
 
 ---
@@ -46,8 +45,6 @@ ACA1/
 │   ├── Poster_Infografia_ACA1.html
 │   ├── screenshot_streamlit.png
 │   └── assets/
-├── docs/
-│   └── Guion_Sustentacion_Video.md
 ├── requirements.txt
 └── README.md
 ```
@@ -88,7 +85,7 @@ El modelo seleccionado es **Random Forest Regressor**. La app muestra una estima
 
 ## Notas para la entrega
 
-- El comprimido de código y datos debe incluir `app/`, `data/`, `models/`, `notebooks/`, `requirements.txt` y este README. Excluir `poster/`, `docs/`, `.git` y `__pycache__`.
+- El comprimido de código y datos debe incluir `app/`, `data/`, `models/`, `notebooks/`, `requirements.txt` y este README. Excluir `poster/`, `.git` y `__pycache__`.
 - Si se modifica `app/app.py`, hacer commit y push para que Streamlit Cloud redepliegue la app pública.
 - El póster ya incluye el enlace del video publicado: https://youtu.be/GRmsT-hqCvA.
 - El video está publicado como **público** y dura 5:03; se dejó así por decisión del equipo. Solo tiene la voz real de Brandon y muestra el póster y la app.
