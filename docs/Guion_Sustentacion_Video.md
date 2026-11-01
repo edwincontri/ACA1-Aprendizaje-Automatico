@@ -7,8 +7,9 @@
 **Docente:** Dr. Hamilton Rivera Flor  
 **Integrantes:** Anyela María Torres Sánchez · Brandon Andres Ardila Meta · Edwin Arturo Contreras Padua  
 **Narrador:** Brandon Andres Ardila Meta (voz real, sin voz generada por IA)  
-**Duración objetivo:** 4 minutos 10 segundos  
-**Rango permitido:** 3 a 5 minutos  
+**Duración del guion:** 4 minutos 10 segundos  
+**Video publicado:** https://youtu.be/GRmsT-hqCvA (5:03)  
+**Rango de referencia:** 3 a 5 minutos  
 **Apoyo visual:** póster oficial + aplicación pública de Streamlit  
 **No mostrar:** notebook, celdas de código ni explicaciones técnicas profundas.
 
@@ -25,7 +26,7 @@
 | 2:30 – 3:40 | Demostración de la app | Aplicación en Streamlit |
 | 3:40 – 4:10 | Impacto, conclusión y cierre | Sección 6 del póster |
 
-> **Importante:** si al ensayar la presentación queda por debajo de 3 minutos, agrega una frase de impacto o una limitación. Si supera los 5 minutos, recorta la explicación de métricas, nunca la demostración de la app.
+> **Importante:** si al ensayar la presentación queda por debajo de 3 minutos, agrega una frase de impacto o una limitación. El video publicado quedó en 5:03; para futuras versiones, recorta la explicación de métricas, nunca la demostración de la app.
 
 ---
 
@@ -77,7 +78,7 @@
 4. **Cámara:** opcional. Si se usa, ubicarla en una esquina, con buena luz y sin tapar el póster ni la app.
 5. **Audio:** grabar en un lugar silencioso, con micrófono cerca y sin música de fondo.
 6. **Resolución:** grabar en 1080p, con el cursor visible y sin notificaciones del sistema.
-7. **Ritmo:** hablar pausado y natural. El guion está calculado para 4:10; con pausas y acciones puede quedar entre 4:15 y 4:30, dentro del rango.
+7. **Ritmo:** hablar pausado y natural. El guion está calculado para 4:10; el video publicado quedó en 5:03.
 8. **Ensayos:** hacer al menos dos ensayos cronometrados. Ajustar el texto, no la velocidad de la app.
 9. **Cierre:** mostrar el póster con los enlaces y mencionar que la app y el video son públicos.
 
@@ -85,14 +86,14 @@
 
 ## 4. CHECKLIST ANTES DE SUBIR EL VIDEO
 
-- [ ] La duración está entre 3 y 5 minutos.
+- [x] Video publicado: https://youtu.be/GRmsT-hqCvA (5:03; se dejó así por decisión del equipo).
 - [ ] Se ve el póster y se ve la app en funcionamiento.
 - [ ] No se muestra el notebook ni código.
 - [ ] La voz es la de Brandon y se escucha clara.
 - [ ] La app muestra una predicción y el margen de error.
-- [ ] El video se sube a YouTube con visibilidad **Pública** (no “No listado”).
+- [x] El video se subió a YouTube con visibilidad **Pública** (no “No listado”).
 - [ ] El enlace se prueba en una ventana de incógnito o desde otro dispositivo.
-- [ ] Se copia el enlace público y se envía para actualizar el póster.
+- [x] Se copió el enlace público y se actualizó el póster.
 
 ---
 
@@ -114,6 +115,6 @@
 >
 > El proyecto estima el precio de una vivienda con datos históricos de California (1990) usando Regresión Lineal y Random Forest. La estimación es una referencia académica y no sustituye un avalúo profesional.
 
-**Configuración:** visibilidad **Pública**, no “No listado”. Copiar el enlace después de publicar y probarlo en incógnito.
+**Publicado:** https://youtu.be/GRmsT-hqCvA — visibilidad **Pública**. El póster ya incluye este enlace.
 
-> **Pendiente:** cuando el video esté publicado, reemplazar en el póster el texto “Enlace público pendiente de publicación” por la URL de YouTube y regenerar el PDF/PNG.
+> **Nota:** el video dura 5:03; se dejó así por decisión del equipo. El póster ya no muestra una duración para evitar contradicciones.
