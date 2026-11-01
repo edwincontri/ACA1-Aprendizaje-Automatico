@@ -18,15 +18,18 @@
 | Entregable | Ubicación |
 |---|---|
 | Código y datos | `app/`, `data/`, `models/`, `notebooks/`, `requirements.txt` |
-| Póster PDF | `poster/Poster_Infografia_ACA1.pdf` |
+| Archivo comprimido | `ACA1_AprendizajeAutomatico_Grupo17.zip` |
+| Póster PDF (entrega aparte) | `poster/Poster_Infografia_ACA1_Grupo17.pdf` |
 | Póster PNG (alta resolución) | `poster/Poster_Infografia_ACA1.png` |
 | Aplicación pública | https://aca1-aprendizaje-automatico-grupo-17.streamlit.app/ |
 | Repositorio | https://github.com/edwincontri/ACA1-Aprendizaje-Automatico |
-| Video | https://youtu.be/GRmsT-hqCvA (5:03, solo voz de Brandon) |
+| Video | https://youtu.be/GRmsT-hqCvA |
 
 ---
 
 ## Estructura
+
+El ZIP de código y datos incluye `app/`, `data/`, `models/`, `notebooks/`, `requirements.txt` y este `README.md`. El póster se entrega aparte.
 
 ```
 ACA1/
@@ -40,7 +43,7 @@ ACA1/
 ├── notebooks/
 │   └── ACA1_Aprendizaje_Automatico.ipynb
 ├── poster/
-│   ├── Poster_Infografia_ACA1.pdf
+│   ├── Poster_Infografia_ACA1_Grupo17.pdf
 │   ├── Poster_Infografia_ACA1.png
 │   ├── Poster_Infografia_ACA1.html
 │   ├── screenshot_streamlit.png
@@ -68,7 +71,7 @@ La app abre en `http://localhost:8501`. También está publicada en:
 https://aca1-aprendizaje-automatico-grupo-17.streamlit.app/
 
 ### Póster
-El PDF listo para entrega está en `poster/Poster_Infografia_ACA1.pdf`. La fuente editable es `poster/Poster_Infografia_ACA1.html` y las imágenes están en `poster/assets/`.
+El PDF listo para entrega está en `poster/Poster_Infografia_ACA1_Grupo17.pdf`. La fuente editable es `poster/Poster_Infografia_ACA1.html` y las imágenes están en `poster/assets/`.
 
 ---
 
@@ -85,7 +88,7 @@ El modelo seleccionado es **Random Forest Regressor**. La app muestra una estima
 
 ## Notas para la entrega
 
-- El comprimido de código y datos debe incluir `app/`, `data/`, `models/`, `notebooks/`, `requirements.txt` y este README. Excluir `poster/`, `.git` y `__pycache__`.
+- El archivo comprimido para entrega es `ACA1_AprendizajeAutomatico_Grupo17.zip` e incluye `app/`, `data/`, `models/`, `notebooks/`, `requirements.txt` y este README. Excluir `poster/`, `.git` y `__pycache__`.
 - Si se modifica `app/app.py`, hacer commit y push para que Streamlit Cloud redepliegue la app pública.
-- El póster ya incluye el enlace del video publicado: https://youtu.be/GRmsT-hqCvA.
-- El video está publicado como **público** y dura 5:03; se dejó así por decisión del equipo. Solo tiene la voz real de Brandon y muestra el póster y la app.
+- El póster ya incluye el enlace y el QR del video publicado: https://youtu.be/GRmsT-hqCvA.
+- El video está publicado como **público**, solo con la voz real de Brandon, y muestra el póster y la app.
